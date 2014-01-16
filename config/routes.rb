@@ -4,7 +4,6 @@ ContactPage::Application.routes.draw do
     get 'thank_you', on: :collection
   end
 
-  get 'blog' => "pages#blog"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
