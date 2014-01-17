@@ -7,8 +7,10 @@
       <div class="modal-body">
         <%= yield %>
       </div>
+      <% if content_for?(:footer) %>
       <div class="modal-footer">
         <%= yield :footer %>
       </div>
+      <% end %>
     </div><!-- /.modal-content -->
   </div><!-- /.modal-dialog -->
