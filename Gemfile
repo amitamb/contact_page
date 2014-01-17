@@ -44,3 +44,7 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'active_attr'
+
+gem 'simple_form'

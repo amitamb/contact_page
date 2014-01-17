@@ -1,2 +1,7 @@
-<h1>Thank you!</h1>
-<p>Your inquiry has been sent and we'll be in touch as soon as possible.</p>
+<% @title = "Thank you!" %>
+
+Your inquiry has been sent and we'll be in touch as soon as possible.
+
+<% content_for :footer do %>
+  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+<% end %>

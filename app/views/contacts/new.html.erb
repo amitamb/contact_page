@@ -1,1 +1,8 @@
+<% @title = "Contact Us" %>
+
 <%= render 'form' %>
+
+<% content_for :footer do %>
+  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+  <button type="button" id="modal-form-submit" class="btn btn-primary">Send</button>
+<% end %>

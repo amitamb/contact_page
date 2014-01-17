@@ -15,3 +15,13 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
+
+
+$(document).on("click", "#modal-form-submit", function(){
+  var form = $(this).closest(".modal-dialog").find("form");
+  form.submit();
+});
+
+$(document).on('hidden.bs.modal', '.modal', function () {
+  $(this).removeData('bs.modal');
+});

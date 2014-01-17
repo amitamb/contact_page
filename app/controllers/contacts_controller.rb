@@ -1,11 +1,15 @@
 class ContactsController < ApplicationController  
+
+  layout "modal"
+
   def new
     @contact = Contact.new
   end
     
   def create
     @contact = Contact.new(contact_params)
-    if @contact.deliver
+    if @contact.valid?
+      @contact.deliver
       render :thank_you
     else
       render :new

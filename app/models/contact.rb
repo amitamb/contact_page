@@ -1,5 +1,5 @@
 class Contact
-  include ActiveModel::Model
+  include ActiveAttr::Model
 
   attr_accessor :nickname, 
                 :name, 
@@ -20,17 +20,17 @@ class Contact
   validates :message,
             length: { :minimum => 10, :maximum => 1000 }
   
-  def initialize(attributes = {})
-    attributes.each do |name, value|
-      send("#{name}=", value)
-    end
-  end
+  # def initialize(attributes = {})
+  #   attributes.each do |name, value|
+  #     send("#{name}=", value)
+  #   end
+  # end
   
   def deliver
     true
   end
       
-  def persisted?
-    false
-  end
+  # def persisted?
+  #   false
+  # end
 end
