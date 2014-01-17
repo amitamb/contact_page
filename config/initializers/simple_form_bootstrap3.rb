@@ -1,3 +1,5 @@
+# https://gist.github.com/tokenvolt/6599141
+
 inputs = %w[
   CollectionSelectInput
   DateTimeInput
