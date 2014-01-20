@@ -15,3 +15,12 @@
 //= require turbolinks
 //= require bootstrap
 //= require_tree .
+
+// This will submit the form contained in modal whenever
+// a button with id modal-form-submit is clicked in a modal
+$(document).on("click", "#modal-form-submit", function(){
+  var form = $(this).
+             closest(".modal-dialog"). // similar to parents i.e. find first parent which has class .modal-dialog
+             find("form"); // find the form
+  form.submit();
+});
