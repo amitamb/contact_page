@@ -3,6 +3,10 @@
 <%= render 'form' %>
 
 <% content_for :footer do %>
+  <!-- These buttons won't work as they are after closing form tag
+       We need to use Javascript to make them call submit on the form inside the modal
+       Plus we have disabled the default send button on form which would make the form look rather ugly
+    -->
   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
   <button type="button" id="modal-form-submit" class="btn btn-primary">Send</button>
 <% end %>
