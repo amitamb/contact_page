@@ -1,5 +1,7 @@
 <%= form_for(@contact, remote: true) do |f|%>
-  <div >
+  <!-- Already an AJAX form -->
+  <!-- Just need to receive the response in a function and display it in modal -->
+  <div>
     <%= f.text_field :nickname, class: "hidden" %>
   </div>
 
