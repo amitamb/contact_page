@@ -2,11 +2,8 @@
 
 <nav>
   <ul>
-    <!-- At present it is loading page new_contact_path
-         i.e. /contacts/new
-         with all its scripts and styleasheets
-         loaded again
-         check the web inspector in chrome to see what is getting in response from server
+    <!-- Now using separate layout file which doesn't have scripts as we don't want modal
+         to contain scripts
     -->
     <h4><li><%= link_to "Contact", new_contact_path, data: { toggle: "modal", target: "#myModal" } %></li></h4>
   </ul>
@@ -14,19 +11,5 @@
 
 <!-- Contact Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">Contact Me</h4>
-      </div>
-      <div class="modal-body">
-        <%= link_to "", new_contact_path %>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" onclick="return validate()">Send</button>
-      </div>
-    </div><!-- /.modal-content -->
-  </div><!-- /.modal-dialog -->
+  
 </div><!-- /.modal -->    

@@ -1,4 +1,7 @@
 class ContactsController < ApplicationController  
+
+  layout "modal"
+
   def new
     @contact = Contact.new
   end
