@@ -2,6 +2,12 @@
 
 <nav>
   <ul>
+    <!-- At present it is loading page new_contact_path
+         i.e. /contacts/new
+         with all its scripts and styleasheets
+         loaded again
+         check the web inspector in chrome to see what is getting in response from server
+    -->
     <h4><li><%= link_to "Contact", new_contact_path, data: { toggle: "modal", target: "#myModal" } %></li></h4>
   </ul>
 </nav>
